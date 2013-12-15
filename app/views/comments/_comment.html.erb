@@ -1,0 +1,11 @@
+<li id="comment_<%= comment.id %>">
+	<p>Author: <%= comment.username %></p>
+	<p><%= comment.body %></p>
+	<% if allow? 'comments', 'edit', comment %>
+	<div class="actions">
+		<span><%= link_to "edit", edit_comment_path(comment) %></span> | 
+		<span><%= link_to "delete", comment, method: :delete, remote: true %></span>
+	</div>
+	<% end %>
+	<br style='clear:both'>
+</li>

@@ -1,0 +1,25 @@
+
+<% @posts.each do |post| %>
+  <div class="post">
+    
+     
+       <div class="title">  <%= link_to post.title, post %></div>
+       <span class="user">
+         by <%= link_to post.user, "/users/#{post.user_id}" %>
+       </span>
+      <br style='clear:both'>
+       <div class="post_content"><%= post.body %></div>
+       <%= post.created_at %>
+       <div class="actions">
+       <% if allow? 'posts', 'edit', post %>
+	       <%= link_to 'Редактировать', edit_post_path(post) %>
+         <% end %><% if allow? 'posts', 'destroy', post %> | 
+	       <%= link_to 'Удалить', post, method: :delete %> | 
+       <% end %>
+       Comments: <%= post.comments.length %>
+       </div>
+      <br style='clear:both'>
+   
+  </div>
+<% end %>
+

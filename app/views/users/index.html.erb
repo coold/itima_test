@@ -1,0 +1,18 @@
+<table class='show_users'>
+	<thead>
+		<td>Nick</td>
+		<td>Email</td>
+		<td>Type</td>
+		<td>Created at</td>
+		<td>Actions</td>
+	</thead>
+	<% @users.each do |user| %>
+	<tr>
+	<td><%= user.username %></td>
+	<td><%= user.email %></td>
+	<td><%= user.status %></td>
+	<td><%= user.created_at %></td>
+	<td><%= link_to 'Show', user %> | <%= link_to 'Edit', edit_user_path(user) %> | <%= link_to 'Delete', user, method: :delete %></td>
+	</tr>
+	<% end %>
+</table>

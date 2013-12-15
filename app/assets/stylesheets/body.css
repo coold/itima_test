@@ -1,0 +1,341 @@
+.container {
+	margin: 50px auto;
+	width: 800px;
+	background-color: white;
+	padding: 1px 8px;
+	box-sizing: border-box;
+}
+h1 {
+	margin: 10px 0;
+	color: #555;
+}
+
+.posts_form .body textarea {
+	margin-top: 5px;
+	width: 760px;
+	min-height: 150px;
+	height: 300px;
+	resize: none;
+}
+
+form .actions input {
+	float: right;
+	border-radius: 4px;
+	width: 200px;
+	color: white;
+	height: 30px;
+	margin-top: 5px;
+	border: 1px solid #4cae4c;
+	background-color: #5cb85c;
+}
+
+form .actions input:hover {
+	background-color: #47a447;
+	border-color: #47a447;
+}
+
+form .actions input:active {
+	box-shadow: inset 0 3px 5px rgba(0,0,0,0.125);
+}
+
+form input {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	line-height: 1.4;
+	height: 20px;
+	padding: 2px 4px;
+}
+
+form textarea {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	line-height: 1.4;
+}
+
+.show_post .title {
+	font-size: 20px;
+	margin-left: 15px;
+	float: left;
+}
+
+.show_post .user {
+	float: right;
+	margin-right: 20px;
+	font-size: 18px;
+}
+
+.show_post .user a {
+	text-decoration: underline;
+}
+
+.show_post .content {
+	margin-left: 25px;
+}
+
+.post, .show_post, #edit_post, #new_posts {
+	padding: 10px 9px;
+	margin: 5px 0;
+	border:1px solid #ddd;
+	border-radius: 2px;
+}
+.post .actions {
+	float: right;
+}
+
+.post .title {
+	text-decoration: underline;
+	font-size: 20px;
+	margin-bottom: 3px;
+	margin-left: 0px;
+	float: left;
+}
+
+.post .user {
+	float: right;
+}
+
+.post .user a {
+	text-decoration: underline;
+}
+
+
+.post_content {
+	margin-left: 8px;
+	margin-bottom: 15px;
+}
+
+#edit_post {
+	margin:8px 0px;
+}
+
+#new_post {
+	margin:8px 0px;
+}
+
+header {
+	background-color: #563d7c;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border:1px solid #463265;
+	border-top: 0;
+}
+
+header .container {
+	background-color: #563d7c;
+	margin: 0 auto;
+	padding: 0 7px;
+	color: white;
+	height: 50px;
+}
+
+header ul {
+	margin: 0 0;
+	list-style: none;
+	padding: 0 0;
+}
+header li {
+	float: left;
+	display: inline-block;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	width: auto;
+	padding: 0 0px;
+	color: #cdbfe3;
+	font-size: 15px;
+}
+
+header li.right_nav {
+	float:right;
+}
+
+header .container a {
+	background-color: #563d7c;
+	padding: 0 10px;
+	display: inline-block;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	width: auto;
+	padding: 0 10px;
+	color: #cdbfe3;
+	font-size: 15px;
+}
+header .container .current {
+	padding: 0 10px;
+	background-color: #463265;
+	color: white;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	width: auto;
+}
+
+header .container a:hover {
+	color: #fff;
+}
+
+hr {
+	margin-left: -10px;
+}
+
+#notice {
+	position: fixed;
+	top: 2px;
+	right: 15px;
+	color: #cdbfe3;
+}
+
+
+.users_form .actions input {
+	width: 210px;
+	margin-top: 20px;
+}
+
+.users_form input {
+	width: 200px;
+	margin-top: 10px;
+	height: 30px;
+	float: left;
+}
+
+.users_form form {
+	float: left;
+	padding-left: 110px;
+	padding-top: 30px;
+}
+
+article {
+	float: right;
+	width: 300px;
+	text-align: justify;
+	font-size: 12px;
+	margin-right: 90px;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+
+.login_form input {
+	width: 200px;
+	margin-top: 10px;
+	height: 30px;
+}
+
+.login_form .actions {
+	float: left;
+	margin-top: 10px;
+	width: 210px;
+	height: 30px;
+}
+
+.login_form .actions input {
+	width: 210px;
+	margin-top: 10px;
+	height: 40px;
+}
+
+.login_form .check {
+	width: 210px;
+}
+.login_form .check span {
+	margin-top: 9px;
+	margin-left: 5px;
+	font-size: 12px;
+	float: left;
+}
+
+.login_form .check input {
+	width: 16px;
+	height: 16px;
+	padding: 0 0;
+	margin: 8px 10px;
+	float: right;
+}
+
+.show_user {
+	margin: 20px 0 0 10px;
+}
+
+.show_user h1 {
+	margin: 0 0;
+}
+
+table.show_users  {
+	margin: 20px 0 0px 10px;
+	border-collapse: collapse;
+	width: 760px;
+}
+
+.show_users td {
+	border:1px solid #ddd;
+}
+
+.show_users thead {
+	font-weight: 700;
+}
+
+.show_users td {
+	font-size: 14px;
+}
+
+.users_form .radio input {
+	height: 16px;
+	width: 16px;
+}
+.users_form .radio {
+	margin-top: 20px;
+}
+
+.radio div {
+	height: 30px;
+}
+
+.radio input {
+	margin-top: 0;
+}
+
+ul.comments {
+	list-style: none;
+}
+
+.comments li {
+	border:1px solid #ddd;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+
+.comments li p {
+	margin: 0 0;
+}
+
+.comments li p:nth-child(2) {
+	margin: 5px 40px;
+}
+
+.comments .actions {
+	float: right;
+}
+
+.comments_form {
+	margin-left: 37px;
+	margin-right: 0px;
+	margin-top: 20px;
+}
+
+.comments_form form>textarea {
+	width: 100%;
+	resize: none;
+	box-sizing: border-box;
+	padding: 10px 10px;
+	margin-bottom: 5px;
+	height: 70px;
+}
+
+.comments_form input {
+	height: 24px;
+	background-color: #5cb85c;
+	color: white;
+	border: 1px solid #4cae4c;
+	margin-left: 1px;
+}

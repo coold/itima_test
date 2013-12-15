@@ -1,0 +1,9 @@
+<div class="show_user">
+<% if @user %>
+	<h1><%= @user.status %> - <%= @user.username %></h1>
+	<small><%= @user.email %></small>
+	<% if allow? 'users', 'edit', @user %> | <%= link_to 'Редактировать', edit_user_path(@user) %> | <%= link_to 'Удалить', @user, method: :delete %><% end %>
+	<% else %>
+	<h1>User not found</h1>
+	<% end %>
+</div>

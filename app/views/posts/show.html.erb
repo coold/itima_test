@@ -1,0 +1,33 @@
+<div class="show_post">
+<% if @post %>
+<%= link_to '<< Назад', posts_path %><% if allow? 'posts', 'edit', @post %> | <%= link_to 'Редактировать', edit_post_path(@post) %> | <%= link_to 'Удалить', @post, method: :delete %><% end %>
+
+<hr color="#ddd" size='1' width="782px" align="center" />
+<p class='title'>
+  <%= @post.title %>
+</p>
+<p class="user">
+ by <%= link_to @post.user, "/users/#{@post.user_id}" %>
+ </p>
+<hr color="#ddd" size='1' width="782px" align="center" />
+
+
+<p class='content'>
+  <%= @post.body %>
+</p>
+<% else %>
+<h1>Post not found</h1>
+<% end %>
+</div>
+<ul class='comments'>
+	<% if @comments.length!=0 %>
+	<h2>Comments:</h2>
+		<% @comments.each do |comment| %>
+			<%= render 'comments/comment', comment: comment %>
+		<% end %>
+	<% end %>
+</ul>
+<% if allow? 'comments', 'create' %>
+<%= render 'comments/form', post: @post, button_name: 'Add a comment', create: true %>
+<% end %>
+

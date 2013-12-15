@@ -1,0 +1,58 @@
+<div class="users_form">
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div style='float: left;'>
+  <div class="field title">
+    <%= f.text_field :username, placeholder: 'Ваш логин на сайте..' %>
+  </div>
+
+
+	  <div class="field">
+	    <%= f.text_field :email, placeholder: 'Электронная почта..'  %>
+	  </div>
+
+
+  <div class="field">
+    <%= f.password_field :password,  placeholder: 'Пароль..' %>
+  </div>
+
+
+
+	  <div class="field">
+	    <%= f.password_field :password_confirmation,  placeholder: 'Повторите пароль..' %>
+	  </div>
+
+  </div>
+  <% if !article %>
+  <br style='clear: both' >
+  <% end %>
+<% if allow_param? :user, :status %>
+  <div class="radio">
+    <div><%= f.radio_button  :status, 'user' %> User</div>
+    <div><%= f.radio_button  :status, 'moder' %> Moderator</div>
+    <div><%= f.radio_button  :status, 'admin' %> Administrator</div>
+  </div>
+  <% end %>
+
+
+  <% if article %>
+	  <article>Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э. Взявшись за поиски происхождения одного из самых странных слов в латыни «consectetur» учитель латинского языка нашел соответствия с текстом Цицерона «De finibus bonorum et malorum» («О пределах добра и зла») достаточно известного в средневековье: «Neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit [...]» (Перевод: «нет никого, кто возлюбил бы, предпочел и возжаждал бы само страдание только за то, что это страдание...»). Типичный текст Lorem ipsum звучит приблизительно так: "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim [...]".</article>
+  <% end %>
+
+	<div class="actions">
+	    <%= f.submit button_name %>
+	</div>
+
+  <br style='clear:both'>
+<% end %>
+</div>

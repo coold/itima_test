@@ -1,0 +1,26 @@
+<div class="container">
+	<nav>
+		<ul>
+			<li><%= link_to_unless_current('Home', posts_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% if allow? 'posts', 'new' %>
+				<li><%= link_to_unless_current('New Post', new_post_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% end %>
+			<% if allow? 'users', 'index' %>
+				<li><%= link_to_unless_current('Users', users_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% end %>
+			<% if allow? 'users', 'new_user_by_admin' %>
+				<li><%= link_to_unless_current('New User', newuser_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% end %>
+			<% if allow? 'logs', 'index' %>
+				<li><%= link_to_unless_current('Logs', logs_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% end %>
+			<% if !current_user %>
+				<li class='right_nav'><%= link_to_unless_current('Log in', login_path) {|link| content_tag 'span', link, class:'current'} %></li>
+				<li class='right_nav'><%= link_to_unless_current('Sign Up', signup_path) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% else %>
+				<li class='right_nav'><%= link_to_unless_current('Log out', logout_path) {|link| content_tag 'span', link, class:'current'} %></li>
+				<li class='right_nav'><%= link_to_unless_current(current_user.username, user_path(current_user)) {|link| content_tag 'span', link, class:'current'} %></li>
+			<% end %>
+		</ul>
+	</nav>
+</div>

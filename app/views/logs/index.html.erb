@@ -1,0 +1,20 @@
+<table class='show_users'>
+	<thead>
+		<td>Nick</td>
+		<td>ip address</td>
+		<td>Subject</td>
+		<td>Action</td>
+		<td>Params</td>
+		<td>Date</td>
+	</thead>
+	<% @logs.each do |log| %>
+	<tr>
+	<td><%= log.username %></td>
+	<td><%= log.ip_address %></td>
+	<td><%= log.controller %></td>
+	<td><%= log.action %></td>
+	<td><%= log.params %></td>
+	<td><%= log.created_at %></td>
+	</tr>
+	<% end %>
+</table>

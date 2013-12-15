@@ -1,0 +1,18 @@
+<h1>Войти</h1>
+<div class="login_form">
+<%= form_tag sessions_path do %>
+	<div class="field">
+		<%= text_field_tag :username,nil, placeholder: "Логин.." %>
+	</div>
+	<div class="field">
+		<%= password_field_tag :password,nil, placeholder: "Пароль.." %>
+	</div>
+	<div class="check field">
+		<span>Запомнить меня</span>
+		<%= check_box_tag :remember_me, 1, params[:remember_me] %>
+	</div>
+	<div class="actions">
+		<%= submit_tag 'Log in' %>
+	</div>
+<% end %>
+</div>

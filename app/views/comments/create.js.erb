@@ -1,0 +1,4 @@
+$('ul.comments').append("<%= j render(@comment) %>");
+$('.comments_form textarea').val('');
+$(".comments_form input[type='submit']").blur();
+$('#notice').html('Comment created');
